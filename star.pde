@@ -4,14 +4,17 @@ class Star {
   int h, s, b; //hue, saturation, colour
 
   //constructor: special function that defines how an object of this class is born.
-  //             defines inital value for fields.
+  //             defines initial value for fields.
 
   Star() {
     x = random(0, width);
     y = random(0, height);
-    vx = 0;
-    vy = random(1, 5);
-    size = vy;
+    //vx = 0;
+    //vy = random(1, 5);
+    
+    vx = random(1, 5);
+    vy = 0;
+    size = vx;
     
     h = int(random(0, 255));
     s = 255;
@@ -26,10 +29,10 @@ class Star {
   }
   
   void act() {
-    y = y + vy;
-    if (y > height + size) {
-      size = vy;
-      y = -size;
+    x = x + vx;
+    if (x > height + size) {
+      size = vx;
+      x = -size;
     }
     size = size + 0.05;
   }

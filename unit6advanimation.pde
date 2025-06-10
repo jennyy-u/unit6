@@ -11,7 +11,8 @@ void setup() {
   size(800, 800, FX2D);
   rectMode(CENTER);
   colorMode (HSB);
-  noStroke();
+  //noStroke();
+  noFill();
 
 
   numbubbles = 100;
@@ -28,8 +29,8 @@ void setup() {
 
 
 void draw() {
-  fill(0, 10);
-  rect(width/2, height/2, width, height);
+  background(0);
+
 
   int i = 0;
   while (i < numbubbles) {

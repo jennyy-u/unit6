@@ -1,29 +1,29 @@
 class Bubble {
   //instance variables or fields
-  float x, y, vx, vy, size;
+  float bx, by, bvx, bvy, bsize;
 
   //constructor
   Bubble() {
-    x = random(0, width);
-    y = random(0, height);
-    vx = 0;
-    vy = random(-1, -7);
+    bx = random(0, width);
+    by = random(0, height);
+    bvx = 0;
+    bvy = random(-1, -7);
 
-    size = -vy;
+    bsize = -bvy;
   }
 
   //behaviour functions: these define what a star does
-  void show() {
+  void showBubble() {
     stroke(255);
-    circle(x, y, size);
+    circle(bx, by, bsize);
   }
 
-  void act() {
-    y = y + vy;
-    if (y > height + size) {
-      size = -vy;
-      y = -size;
+  void actBubble() {
+    by = by + bvy;
+    if (by > height + bsize) {
+      bsize = -bvy;
+      by = -bsize;
     }
-    size = size + 0.05;
+    bsize = bsize + 0.05;
   }
 }

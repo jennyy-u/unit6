@@ -36,7 +36,7 @@ void setup() {
   
   int k = 0;
   while (k < numKites) {
-    //numKites[k] = new Kite();
+    myKites[k] = new Kite();
     k++;
   }
   
@@ -58,8 +58,8 @@ void draw() {
   
   int ik = 0;
   while (ik < numKites) {
-    //myKites[ik].showKite();
-    //myKites[ik].actKite();
+    myKites[ik].showKite();
+    myKites[ik].actKite();
     ik++;
   }
   
